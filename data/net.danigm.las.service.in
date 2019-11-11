@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=net.danigm.las
+Exec=@bindir@/las --gapplication-service

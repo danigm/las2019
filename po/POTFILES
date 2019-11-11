@@ -1,0 +1,7 @@
+data/net.danigm.las.desktop.in
+data/net.danigm.las.appdata.xml.in
+data/net.danigm.las.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

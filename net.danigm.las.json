@@ -1,0 +1,48 @@
+{
+    "app-id" : "net.danigm.las",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.34",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "las",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--own-name=net.danigm.las",
+        "--own-name=net.danigm.las2",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+        {
+            "name" : "las",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : ".",
+                    "url" : "file:///sysroot/home/danigm/Documents/LAS-2019/las"
+                }
+            ]
+        }
+    ],
+    "build-options" : {
+        "env" : {
+        }
+    }
+}
